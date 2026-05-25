@@ -73,6 +73,7 @@ export const loginUser=async(req,res)=>{
         
         if(isPasswordValid){
             const payload={
+                id:user._id,
                 email:user.email,
                 firstname:user.firstname,
                 lastname:user.lastname,
@@ -133,6 +134,7 @@ export async function googlelogin(req, res) {
         }
 
         const payload = {
+            id: user._id,
             email: user.email,
             firstname: user.firstname,
             lastname: user.lastname,
